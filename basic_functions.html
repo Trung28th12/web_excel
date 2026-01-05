@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng hợp các hàm Excel cơ bản cho người mới bắt đầu | ExcelPro</title>
+    <meta name="description" content="Học 5 hàm Excel cơ bản nhất: SUM, AVERAGE, MAX, MIN, COUNT. Hướng dẫn chi tiết cách dùng và phím tắt tính nhanh.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="home.html" style="color:white; text-decoration:none;">ExcelPro.vn</a></div>
+        <nav>
+            <a href="home.html">Trang chủ</a>
+            <a href="index.html">Hàm Excel</a>
+            <a href="#">Google Sheets</a>
+            <a href="template.html">Tải Template</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <h1>5 Hàm Excel cơ bản "cân" được 80% công việc văn phòng</h1>
+            <p class="meta">Đăng bởi: Admin | Chuyên mục: Nhập môn Excel</p>
+
+            <div class="intro">
+                <p>Bạn mới làm quen với Excel? Đừng lo lắng về những công thức dài ngoằng. Chỉ cần nắm vững <strong>5 nhóm hàm cơ bản</strong> dưới đây, bạn đã có thể xử lý tốt các bảng tính doanh thu, điểm số hay quản lý kho hàng ngày.</p>
+            </div>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - Top Banner]</p>
+            </div>
+
+            <h2>1. Hàm SUM (Tính tổng)</h2>
+            <p>Đây là hàm được dùng nhiều nhất thế giới. Thay vì bấm máy tính cộng tay, bạn dùng hàm này để cộng cả một cột dài.</p>
+            <div class="code-block">
+                =SUM(number1, [number2], ...)
+            </div>
+            <p><strong>Ví dụ:</strong> Để tính tổng doanh thu từ ô B2 đến B10:</p>
+            <p><code>=SUM(B2:B10)</code></p>
+            
+            <div class="call-to-action" style="background: #fff3cd; color: #856404; border: 1px solid #ffeeba;">
+                <strong>💡 Mẹo Pro:</strong> Bấm phím tắt <code>Alt</code> + <code>=</code> để tự động tính tổng cực nhanh mà không cần gõ hàm!
+            </div>
+
+            <h2>2. Hàm AVERAGE (Tính trung bình cộng)</h2>
+            <p>Dùng để tính điểm trung bình của học sinh hoặc doanh thu trung bình tháng.</p>
+            <div class="code-block">
+                =AVERAGE(B2:B10)
+            </div>
+            <p>Kết quả sẽ là tổng giá trị các ô chia cho số lượng ô.</p>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - In Article]</p>
+            </div>
+
+            <h2>3. Hàm MAX và MIN (Lớn nhất & Nhỏ nhất)</h2>
+            <p>Giúp bạn tìm ra ai có điểm cao nhất lớp hoặc sản phẩm nào bán ế nhất.</p>
+            <ul>
+                <li><strong>=MAX(C2:C100):</strong> Tìm số lớn nhất trong vùng chọn.</li>
+                <li><strong>=MIN(C2:C100):</strong> Tìm số nhỏ nhất trong vùng chọn.</li>
+            </ul>
+
+            <h2>4. Hàm COUNT và COUNTA (Hàm đếm)</h2>
+            <p>Rất nhiều người nhầm lẫn 2 hàm này. Bạn hãy chú ý nhé:</p>
+            
+            <table border="1" cellpadding="10" style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+                <tr style="background: #f2f2f2;">
+                    <th>Hàm</th>
+                    <th>Công dụng</th>
+                </tr>
+                <tr>
+                    <td><strong>=COUNT(Vùng)</strong></td>
+                    <td>Chỉ đếm các ô chứa <strong>SỐ</strong>. (Bỏ qua chữ viết).</td>
+                </tr>
+                <tr>
+                    <td><strong>=COUNTA(Vùng)</strong></td>
+                    <td>Đếm tất cả các ô <strong>CÓ DỮ LIỆU</strong> (Bất kể số hay chữ, miễn là không để trống).</td>
+                </tr>
+            </table>
+
+            <p><em>Ví dụ: Muốn đếm sỉ số lớp học dựa trên danh sách tên, bạn phải dùng COUNTA.</em></p>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - In Article]</p>
+            </div>
+
+            <h2>5. Bước tiếp theo là gì?</h2>
+            <p>Sau khi thành thạo các hàm trên, bạn đã sẵn sàng cho các thử thách khó hơn. Hãy học cách dò tìm dữ liệu từ bảng này sang bảng khác với bài viết dưới đây:</p>
+            
+            <div class="call-to-action">
+                <h3>Nâng cao kỹ năng ngay</h3>
+                <button onclick="window.location.href='index.html'">Xem hướng dẫn hàm VLOOKUP</button>
+            </div>
+
+        </main>
+
+        <aside>
+            <div class="sidebar-widget">
+                <h3>Tìm kiếm</h3>
+                <input type="text" placeholder="Tìm hàm SUM, AVERAGE...">
+            </div>
+
+            <div class="ad-box sticky-ad">
+                <p>[Quảng cáo Google AdSense - Vertical]</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Bài viết liên quan</h3>
+                <ul>
+                    <li><a href="if_nested.html">Hàm IF lồng nhau</a></li>
+                    <li><a href="template.html">Tải mẫu Bảng Lương</a></li>
+                    <li><a href="pivot.html">Pivot Table là gì?</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Bản quyền © 2026 ExcelPro.vn</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

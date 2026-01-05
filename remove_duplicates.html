@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Cách xóa dữ liệu trùng lặp trong Excel nhanh nhất | ExcelPro</title>
+    <meta name="description" content="Hướng dẫn lọc và xóa dữ liệu trùng nhau (Duplicate) trong Excel. Sử dụng tính năng Remove Duplicates, Conditional Formatting và hàm UNIQUE mới nhất.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="home.html" style="color:white; text-decoration:none;">ExcelPro.vn</a></div>
+        <nav>
+            <a href="home.html">Trang chủ</a>
+            <a href="functions.html">Hàm Excel</a>
+            <a href="sheets.html">Google Sheets</a>
+            <a href="templates.html">Tải Template</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <h1>3 Cách Xóa Dữ Liệu Trùng Lặp (Remove Duplicates) Trong 1 Nốt Nhạc</h1>
+            <p class="meta">Đăng bởi: Admin | Chuyên mục: Xử lý dữ liệu</p>
+
+            <div class="intro">
+                <p>Bạn có một danh sách khách hàng dài cả ngàn dòng nhưng có rất nhiều tên bị lặp lại 2-3 lần? Nếu ngồi xóa thủ công từng dòng thì đến sáng mai mới xong. Hãy để Excel giúp bạn làm điều đó tự động.</p>
+            </div>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - Top Banner]</p>
+            </div>
+
+            <h2>Cách 1: Dùng tính năng Remove Duplicates (Nhanh nhất)</h2>
+            <p>Đây là cách truyền thống và dễ dùng nhất. Nó sẽ xóa vĩnh viễn các dòng trùng, chỉ giữ lại 1 dòng duy nhất.</p>
+            
+            <div class="post-thumb">
+                <img src="images/demo-remove-dup.jpg" alt="Tính năng Remove Duplicates trong thẻ Data" style="background:#eee; min-height:200px; display:flex; align-items:center; justify-content:center; color:#555;" onerror="this.style.display='none'">
+            </div>
+
+            <ol>
+                <li>Bôi đen vùng dữ liệu cần lọc trùng.</li>
+                <li>Vào thẻ <strong>Data</strong> trên thanh menu.</li>
+                <li>Chọn biểu tượng <strong>Remove Duplicates</strong> (Xóa trùng lặp).</li>
+                <li>Nhấn <strong>OK</strong>. Excel sẽ thông báo đã xóa bao nhiêu dòng trùng.</li>
+            </ol>
+            
+            <div class="call-to-action" style="background: #fff3cd; color: #856404; border: 1px solid #ffeeba;">
+                <strong>⚠️ Cảnh báo:</strong> Thao tác này sẽ xóa mất dữ liệu gốc. Hãy copy ra một sheet mới trước khi làm nhé!
+            </div>
+
+            <h2>Cách 2: Chỉ tô màu những ô trùng (Không xóa)</h2>
+            <p>Đôi khi bạn chỉ muốn biết ai bị trùng để kiểm tra lại chứ không muốn xóa ngay. Hãy dùng <strong>Conditional Formatting</strong>.</p>
+            <ul>
+                <li><strong>B1:</strong> Bôi đen cột dữ liệu.</li>
+                <li><strong>B2:</strong> Vào thẻ <strong>Home</strong> > <strong>Conditional Formatting</strong>.</li>
+                <li><strong>B3:</strong> Chọn <strong>Highlight Cells Rules</strong> > <strong>Duplicate Values...</strong></li>
+                <li><strong>B4:</strong> Chọn màu đỏ và nhấn OK. Những ô trùng nhau sẽ sáng rực lên.</li>
+            </ul>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - In Article]</p>
+            </div>
+
+            <h2>Cách 3: Dùng hàm UNIQUE (Excel 365 / Google Sheets)</h2>
+            <p>Nếu bạn muốn trích xuất danh sách duy nhất sang một chỗ khác mà vẫn giữ nguyên bảng gốc, hàm <strong>UNIQUE</strong> là giải pháp tuyệt vời.</p>
+            <p>Cú pháp:</p>
+            <div class="code-block">
+                =UNIQUE(Vùng_dữ_liệu)
+            </div>
+            <p>Ví dụ: <code>=UNIQUE(A2:A100)</code> sẽ trả về danh sách tên không trùng lặp ngay lập tức.</p>
+
+            <div class="call-to-action">
+                <h3>Dữ liệu đã sạch rồi, làm báo cáo thôi!</h3>
+                <p>Sau khi xóa trùng, bạn có thể dùng Pivot Table để thống kê chính xác.</p>
+                <button onclick="window.location.href='pivot.html'">Xem hướng dẫn Pivot Table</button>
+            </div>
+
+        </main>
+
+        <aside>
+            <div class="sidebar-widget">
+                <h3>Tìm kiếm</h3>
+                <input type="text" placeholder="Tìm cách xóa trùng...">
+            </div>
+
+            <div class="ad-box sticky-ad">
+                <p>[Quảng cáo Google AdSense - Vertical]</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Bài viết liên quan</h3>
+                <ul>
+                    <li><a href="troubleshoot.html">Sửa lỗi #N/A khi VLOOKUP</a></li>
+                    <li><a href="basic_functions.html">Hàm đếm dữ liệu (COUNT)</a></li>
+                    <li><a href="inventory.html">File quản lý kho (Cần xóa trùng mã SP)</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Bản quyền © 2026 ExcelPro.vn</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

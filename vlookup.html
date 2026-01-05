@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn dùng hàm VLOOKUP trong Excel chi tiết nhất | ExcelPro</title>
+    <meta name="description" content="Hướng dẫn cách sử dụng hàm VLOOKUP trong Excel từ cơ bản đến nâng cao. Có ví dụ minh họa và file thực hành.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo"><a href="home.html" style="color:white; text-decoration:none;">ExcelPro.vn</a></div>
+    <nav>
+        <a href="home.html">Trang chủ</a>         <a href="functions.html">Hàm Excel</a>
+<a href="sheets.html">Google Sheets</a>
+        <a href="template.html">Tải Template</a>
+    </nav>
+</header>
+
+    <div class="container">
+        <main>
+            <h1>Hướng dẫn sử dụng hàm VLOOKUP trong Excel (Có ví dụ)</h1>
+            <p class="meta">Đăng bởi: Admin | Ngày: 05/01/2026</p>
+
+            <div class="intro">
+                <p><strong>Hàm VLOOKUP</strong> là một trong những hàm tìm kiếm phổ biến nhất trong Excel. Nếu bạn cần tìm tên sản phẩm dựa trên mã số, hoặc tìm lương nhân viên dựa trên mã nhân viên, VLOOKUP chính là giải pháp.</p>
+            </div>
+
+            <div class="ad-box">
+                <p>[Vị trí Quảng cáo Google AdSense - Hiển thị tốt trên Mobile]</p>
+            </div>
+
+            <h2>1. Công thức hàm VLOOKUP</h2>
+            <p>Cú pháp chuẩn của hàm như sau:</p>
+            <div class="code-block">
+                =VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])
+            </div>
+            <ul>
+                <li><strong>lookup_value:</strong> Giá trị bạn muốn tìm (Ví dụ: Mã nhân viên "NV001").</li>
+                <li><strong>table_array:</strong> Vùng dữ liệu chứa thông tin cần tìm.</li>
+                <li><strong>col_index_num:</strong> Số thứ tự cột chứa kết quả bạn muốn lấy về.</li>
+                <li><strong>range_lookup:</strong> Chọn 0 (dò tìm chính xác) hoặc 1 (dò tìm tương đối).</li>
+            </ul>
+
+            <h2>2. Ví dụ minh họa thực tế</h2>
+            <p>Giả sử bạn có một bảng danh sách sản phẩm như hình dưới đây:</p>
+            
+            <div class="image-placeholder">
+                [Ảnh chụp màn hình bảng Excel ví dụ]
+            </div>
+
+            <p>Để tìm tên sản phẩm cho mã <strong>SP02</strong>, ta dùng công thức:</p>
+            <div class="code-block">
+                =VLOOKUP("SP02", A2:C10, 2, 0)
+            </div>
+
+            <div class="ad-box">
+                <p>[Vị trí Quảng cáo Google AdSense - In Article]</p>
+            </div>
+
+            <h2>3. Các lỗi thường gặp khi dùng VLOOKUP</h2>
+            <p>Rất nhiều người mới gặp lỗi <code>#N/A</code>. Nguyên nhân thường do:</p>
+            <ul>
+                <li>Mã tìm kiếm không tồn tại trong bảng dữ liệu.</li>
+                <li>Bạn quên cố định vùng dữ liệu (quên nhấn F4).</li>
+                <li>Dữ liệu bị thừa khoảng trắng (Space).</li>
+            </ul>
+
+<div class="call-to-action">
+    <h3>Bạn cần file mẫu để thực hành?</h3>
+    <p>File chứa sẵn dữ liệu bán hàng tháng 1 và danh mục sản phẩm.</p>
+    
+    <a href="https://docs.google.com/spreadsheets/d/196pFYnXiJ5Wp0D_Rqz6PQWbhr4XnbP97/edit?usp=drive_link&ouid=106794247660393648847&rtpof=true&sd=true download="Bai_Tap_VLOOKUP_ExcelPro.xlsx" style="text-decoration: none;">
+        <button style="cursor: pointer;">
+            <i class="fas fa-download"></i> Tải File Thực Hành Ngay (.xlsx)
+        </button>
+    </a>
+</div>
+
+        </main>
+
+        <aside>
+            <div class="sidebar-widget">
+                <h3>Tìm kiếm</h3>
+                <input type="text" placeholder="Tìm hàm Excel...">
+            </div>
+
+            <div class="ad-box sticky-ad">
+                <p>[Vị trí Quảng cáo Google AdSense - Vuông Lớn]</p>
+                <p>Đây là vị trí kiếm tiền tốt nhất trên Máy tính (PC)</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Bài viết xem nhiều</h3>
+                <ul>
+                    <li><a href="if_nested.html">Hàm IF lồng nhau là gì?</a></li>
+                    <li><a href="pivot.html">Cách dùng Pivot Table</a></li>
+<li><a href="remove_duplicates.html">Cách xóa dữ liệu trùng lặp</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Bản quyền © 2026 ExcelPro. Website chia sẻ kiến thức Excel miễn phí.</p>
+        <a href="#">Chính sách bảo mật</a> | <a href="#">Liên hệ</a>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

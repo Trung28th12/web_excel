@@ -1,0 +1,321 @@
+/* CẤU TRÚC CƠ BẢN */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: #217346; /* Màu xanh đặc trưng của Excel */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* LAYOUT CHÍNH */
+.container {
+    display: flex;
+    max-width: 1100px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* PHẦN NỘI DUNG BÀI VIẾT */
+main {
+    flex: 3; /* Chiếm 75% chiều rộng */
+    padding-right: 20px;
+}
+
+h1 { color: #217346; }
+h2 { border-bottom: 2px solid #217346; padding-bottom: 5px; margin-top: 30px;}
+
+/* PHẦN THANH BÊN (SIDEBAR) */
+aside {
+    flex: 1; /* Chiếm 25% chiều rộng */
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+}
+
+/* CÁC HỘP QUẢNG CÁO (MÔ PHỎNG) */
+.ad-box {
+    background: #e9e9e9;
+    border: 1px dashed #999;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Code Block hiển thị công thức Excel */
+.code-block {
+    background: #f0f0f0;
+    border-left: 5px solid #217346;
+    padding: 10px;
+    font-family: monospace;
+    margin: 10px 0;
+}
+
+/* Nút kêu gọi hành động */
+.call-to-action {
+    background: #e8f5e9;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+button {
+    background: #217346;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a { color: #ccc; }
+
+/* RESPONSIVE (Hiển thị tốt trên điện thoại) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    aside {
+        border-left: none;
+        border-top: 1px solid #ddd;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+    header nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+/* --- PHẦN THÊM MỚI CHO TRANG CHỦ --- */
+
+/* 1. Hero Section (Phần đầu trang nổi bật) */
+.hero-section {
+    background: linear-gradient(135deg, #217346 0%, #1e5c39 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Ô tìm kiếm to đẹp */
+.search-box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-box input {
+    padding: 15px;
+    width: 60%;
+    max-width: 500px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box button {
+    background: #ffc107; /* Màu vàng nổi bật trên nền xanh */
+    color: #333;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 0 30px;
+}
+
+.search-box button:hover {
+    background: #e0a800;
+}
+
+/* 2. Features (Các ô danh mục tròn tròn) */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background: white;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: -30px auto 20px; /* Kéo lên đè lên phần Hero một chút */
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feature-item {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.feature-item i {
+    font-size: 40px;
+    color: #217346;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+/* 3. Post Grid (Lưới bài viết dạng thẻ) */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Chia làm 2 cột */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.post-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.post-card:hover {
+    transform: translateY(-5px); /* Hiệu ứng bay lên khi di chuột */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.post-info {
+    padding: 15px;
+}
+
+.post-info h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.post-info h3 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.post-info h3 a:hover {
+    color: #217346;
+}
+
+.section-title {
+    border-left: 5px solid #217346;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+/* Responsive cho Mobile */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 1.8em; }
+    .search-box { flex-direction: column; }
+    .search-box input { width: 100%; box-sizing: border-box; }
+    .post-grid { grid-template-columns: 1fr; } /* Mobile hiện 1 cột */
+    .features { flex-direction: column; margin-top: 0; border-radius: 0; box-shadow: none;}
+}
+/* --- PHẦN DOWNLOAD BOX (Dành riêng cho trang template) --- */
+
+.download-section {
+    background-color: #f8f9fa;
+    border: 2px solid #217346; /* Viền xanh Excel */
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    margin: 30px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.download-section h3 {
+    color: #217346;
+    margin-top: 0;
+}
+
+.download-btn {
+    background: #e63946; /* Nút màu đỏ nổi bật kích thích hành động */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 15px 0;
+    box-shadow: 0 4px 0 #b71c1c; /* Tạo hiệu ứng nút nổi 3D */
+}
+
+.download-btn:hover {
+    background: #ff5252;
+    transform: translateY(2px); /* Hiệu ứng nhấn xuống */
+    box-shadow: 0 2px 0 #b71c1c;
+}
+
+.download-btn i {
+    margin-right: 10px;
+}
+
+.safe-note {
+    font-size: 0.9em;
+    color: #28a745; /* Màu xanh lá cây biểu thị an toàn */
+    margin-top: 10px;
+}
+/* --- CẬP NHẬT CSS CHO ẢNH THUMBNAIL --- */
+
+/* 1. Xóa bỏ các style cũ của placeholder (màu xám, căn giữa...) */
+.post-thumb {
+    background-color: transparent !important; /* Bỏ màu nền xám */
+    height: auto !important; /* Bỏ chiều cao cố định cũ */
+    display: block !important; /* Bỏ flexbox căn giữa cũ */
+}
+
+/* 2. Định dạng thẻ ảnh (img) nằm bên trong .post-thumb */
+.post-thumb img {
+    width: 100%; /* Ảnh luôn rộng bằng thẻ chứa nó */
+    height: 180px; /* Chiều cao cố định (bạn có thể tăng giảm tùy ý) */
+    
+    /* QUAN TRỌNG: Giúp ảnh tự cắt (crop) để lấp đầy khung mà không bị méo */
+    object-fit: cover; 
+    
+    /* Hiệu ứng bo tròn góc trên cho đẹp */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}

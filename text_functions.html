@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàm LEFT, RIGHT, MID trong Excel: Cách cắt chuỗi, tách họ tên | ExcelPro</title>
+    <meta name="description" content="Hướng dẫn sử dụng nhóm hàm xử lý chuỗi: LEFT (cắt trái), RIGHT (cắt phải), MID (cắt giữa). Ví dụ tách mã nhân viên, biển số xe.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="home.html" style="color:white; text-decoration:none;">ExcelPro.vn</a></div>
+        <nav>
+            <a href="home.html">Trang chủ</a>
+            <a href="functions.html" style="text-decoration: underline;">Hàm Excel</a>
+            <a href="sheets.html">Google Sheets</a>
+            <a href="template.html">Tải Template</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <h1>Bộ 3 quyền lực: LEFT, RIGHT, MID - Cắt chuỗi siêu tốc</h1>
+            <p class="meta">Đăng bởi: Admin | Chuyên mục: Xử lý văn bản (Text)</p>
+
+            <div class="intro">
+                <p>Dữ liệu tải về từ phần mềm thường bị dính chùm vào nhau. Ví dụ: "HCM-Q1-001". Làm sao để tách riêng "HCM", "Q1" và "001"? Đừng gõ lại thủ công! Hãy dùng bộ 3 hàm cắt chuỗi dưới đây.</p>
+            </div>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - Top Banner]</p>
+            </div>
+
+            <h2>1. Hàm LEFT (Lấy ký tự bên trái)</h2>
+            <p>Dùng để lấy những ký tự đầu tiên của chuỗi.</p>
+            <div class="code-block">
+                =LEFT(text, [num_chars])
+            </div>
+            <ul>
+                <li><strong>text:</strong> Ô chứa văn bản.</li>
+                <li><strong>num_chars:</strong> Số lượng ký tự muốn lấy.</li>
+            </ul>
+            <p><strong>Ví dụ:</strong> Ô A1 chứa "IPHONE-15". Để lấy chữ "IPHONE" (6 ký tự):</p>
+            <p><code>=LEFT(A1, 6)</code> -> Kết quả: <strong>IPHONE</strong></p>
+
+            <h2>2. Hàm RIGHT (Lấy ký tự bên phải)</h2>
+            <p>Dùng để lấy những ký tự cuối cùng của chuỗi.</p>
+            <div class="code-block">
+                =RIGHT(text, [num_chars])
+            </div>
+            <p><strong>Ví dụ:</strong> Ô A1 chứa "IPHONE-15". Để lấy số "15" (2 ký tự cuối):</p>
+            <p><code>=RIGHT(A1, 2)</code> -> Kết quả: <strong>15</strong></p>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - In Article]</p>
+            </div>
+
+            <h2>3. Hàm MID (Lấy ký tự ở giữa - Quan trọng)</h2>
+            <p>Đây là hàm khó nhất trong nhóm. Dùng khi bạn muốn lấy phần nằm giữa, không phải đầu cũng không phải cuối.</p>
+            <div class="code-block">
+                =MID(text, start_num, num_chars)
+            </div>
+            <ul>
+                <li><strong>start_num:</strong> Vị trí bắt đầu cắt (Đếm từ trái sang).</li>
+                <li><strong>num_chars:</strong> Số lượng ký tự muốn lấy.</li>
+            </ul>
+            
+            <h3>Ví dụ thực tế: Tách biển số xe</h3>
+            <p>Giả sử ô A2 có biển số: <strong>"59-E1-123.45"</strong></p>
+            <p>Bạn muốn lấy chữ <strong>"E1"</strong> ở giữa:</p>
+            <ul>
+                <li>Chữ "E" bắt đầu ở vị trí thứ 4 (5, 9, dấu gạch, E).</li>
+                <li>Bạn muốn lấy 2 ký tự (E và 1).</li>
+            </ul>
+            <p>Công thức là: <code>=MID(A2, 4, 2)</code> -> Kết quả: <strong>E1</strong></p>
+
+            
+
+            <h2>4. Mẹo nâng cao: Kết hợp với hàm LEN</h2>
+            <p>Đôi khi bạn không biết chuỗi dài bao nhiêu để cắt. Hãy dùng hàm <strong>LEN</strong> (đếm độ dài) để hỗ trợ.</p>
+            <p>Ví dụ: Muốn bỏ 2 ký tự đầu, lấy toàn bộ phần sau: <code>=RIGHT(A1, LEN(A1)-2)</code>.</p>
+
+            <div class="call-to-action">
+                <h3>Dữ liệu bị trùng lặp sau khi tách?</h3>
+                <p>Xem ngay cách lọc dữ liệu trùng nhau (Remove Duplicates).</p>
+                <button onclick="window.location.href='remove_duplicates.html'">Xóa trùng lặp ngay</button>
+            </div>
+
+        </main>
+
+        <aside>
+            <div class="sidebar-widget">
+                <h3>Tìm kiếm</h3>
+                <input type="text" placeholder="Tìm hàm Left, Mid...">
+            </div>
+
+            <div class="ad-box sticky-ad">
+                <p>[Quảng cáo Google AdSense - Vertical]</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Bài viết liên quan</h3>
+                <ul>
+                    <li><a href="functions.html">Tra cứu tất cả hàm Excel</a></li>
+                    <li><a href="remove_duplicates.html">Cách xóa dữ liệu trùng</a></li>
+                    <li><a href="basic_functions.html">Hàm SUM, AVERAGE cơ bản</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Bản quyền © 2026 ExcelPro.vn</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

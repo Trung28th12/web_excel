@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Google Sheets: Các hàm Online mạnh mẽ nhất (Importrange, Query) | ExcelPro</title>
+    <meta name="description" content="Hướng dẫn sử dụng Google Sheets từ A-Z. Cách dùng hàm IMPORTRANGE kết nối dữ liệu, hàm QUERY lọc dữ liệu siêu tốc và chia sẻ file làm việc nhóm.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="home.html" style="color:white; text-decoration:none;">ExcelPro.vn</a></div>
+        <nav>
+            <a href="home.html">Trang chủ</a>
+            <a href="functions.html">Hàm Excel</a>
+            <a href="sheets.html" style="text-decoration: underline; font-weight: bold;">Google Sheets</a>
+            <a href="template.html">Tải Template</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <h1>Google Sheets: Không chỉ là "Excel Online"</h1>
+            <p class="meta">Đăng bởi: Admin | Chuyên mục: Điện toán đám mây</p>
+
+            <div class="intro">
+                <p>Nhiều người nghĩ Google Sheets chỉ là bản sao chép thiếu tính năng của Excel. Sai lầm! Google Sheets sở hữu những <strong>hàm độc quyền</strong> giúp bạn kết nối dữ liệu tự động và làm việc nhóm cực nhanh mà Excel cài trên máy không làm được.</p>
+            </div>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - Top Banner]</p>
+            </div>
+
+            <h2>1. Hàm IMPORTRANGE: Kết nối các file với nhau</h2>
+            <p>Trong Excel, việc lấy dữ liệu từ file này sang file khác rất dễ bị lỗi đường dẫn (Link). Nhưng với Google Sheets, hàm <strong>IMPORTRANGE</strong> là "vua".</p>
+            <p><strong>Công dụng:</strong> Tự động kéo dữ liệu từ file Sheets A sang file Sheets B. File A sửa, file B tự nhảy theo.</p>
+            <div class="code-block">
+                =IMPORTRANGE("đường_link_của_file_gốc", "Tên_Sheet!A1:C10")
+            </div>
+            <p><em>Lưu ý: Lần đầu tiên gõ hàm, bạn phải bấm nút "Allow Access" (Cho phép truy cập) hiện ra trên ô.</em></p>
+
+            <h2>2. Hàm GOOGLEFINANCE: Lấy tỷ giá & chứng khoán</h2>
+            <p>Bạn cần bảng theo dõi tỷ giá USD/VND hoặc giá cổ phiếu tự động cập nhật mỗi giây? Không cần nhập tay!</p>
+            <div class="code-block">
+                =GOOGLEFINANCE("CURRENCY:USDVND")
+            </div>
+            <p>Hàm này lấy dữ liệu trực tiếp từ Google Finance, hoàn toàn miễn phí.</p>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - In Article]</p>
+            </div>
+
+            <h2>3. Hàm QUERY: Sức mạnh của lập trình SQL</h2>
+            <p>Đây là hàm mạnh nhất của Google Sheets. Nó cho phép bạn lọc, sắp xếp, chọn cột dữ liệu chỉ bằng 1 câu lệnh duy nhất (thay vì phải filter thủ công).</p>
+            <div class="code-block">
+                =QUERY(A1:D100, "SELECT A, B WHERE C > 5000 ORDER BY D DESC")
+            </div>
+            <p>Câu lệnh trên nghĩa là: <em>"Lấy cột A và B, với điều kiện cột C lớn hơn 5000, và sắp xếp giảm dần theo cột D"</em>.</p>
+
+            <h2>4. So sánh nhanh: Khi nào dùng Excel? Khi nào dùng Sheets?</h2>
+            <table border="1" cellpadding="10" style="width:100%; border-collapse: collapse; margin-top: 20px; border-color: #ddd;">
+                <tr style="background: #217346; color: white;">
+                    <th>Tiêu chí</th>
+                    <th>Google Sheets ☁️</th>
+                    <th>Microsoft Excel 💻</th>
+                </tr>
+                <tr>
+                    <td><strong>Ưu điểm</strong></td>
+                    <td>Miễn phí, làm việc nhóm (nhiều người sửa cùng lúc), tự lưu.</td>
+                    <td>Xử lý file cực nặng (triệu dòng), nhiều tính năng cao cấp (Power Query).</td>
+                </tr>
+                <tr>
+                    <td><strong>Khuyết điểm</strong></td>
+                    <td>Xử lý file nặng sẽ bị lag, chậm.</td>
+                    <td>Phải trả phí bản quyền, khó chia sẻ file realtime.</td>
+                </tr>
+            </table>
+
+            <div class="call-to-action">
+                <h3>Bạn cần mẫu file Google Sheets quản lý công việc?</h3>
+                <button onclick="window.location.href='template.html'">Vào thư viện Template ngay</button>
+            </div>
+
+        </main>
+
+        <aside>
+            <div class="sidebar-widget">
+                <h3>Tìm kiếm Sheets...</h3>
+                <input type="text" placeholder="Tìm hàm Query, Importrange...">
+            </div>
+
+            <div class="ad-box sticky-ad">
+                <p>[Quảng cáo Google AdSense - Vertical]</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Bài viết liên quan</h3>
+                <ul>
+                    <li><a href="functions.html">Tra cứu hàm Excel</a></li>
+                    <li><a href="inventory.html">File quản lý kho (Dùng được cho Sheets)</a></li>
+                    <li><a href="charts.html">Cách vẽ biểu đồ</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Bản quyền © 2026 ExcelPro.vn</p>
+    </footer>
+    <script src="script.js"></script>
+    
+    <style>
+        table tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng hợp các lỗi Excel thường gặp và cách sửa (#N/A, #VALUE, #REF) | ExcelPro</title>
+    <meta name="description" content="Tra cứu ý nghĩa các mã lỗi trong Excel: #N/A, #VALUE!, #DIV/0!, #REF!. Hướng dẫn sửa lỗi file Excel không tự nhảy công thức.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="home.html" style="color:white; text-decoration:none;">ExcelPro.vn</a></div>
+        <nav>
+            <a href="home.html">Trang chủ</a>
+            <a href="index.html">Hàm Excel</a>
+            <a href="#">Google Sheets</a>
+            <a href="templates.html">Tải Template</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <h1>Từ điển lỗi Excel: Tại sao công thức của bạn không chạy?</h1>
+            <p class="meta">Đăng bởi: Admin | Chuyên mục: Gỡ lỗi (Troubleshooting)</p>
+
+            <div class="intro">
+                <p>Bạn vừa gõ xong công thức dài dằng dặc, nhấn Enter và nhận lại một mã lỗi khó hiểu như <code>#N/A</code> hay <code>#VALUE!</code>? Đừng vội xóa đi làm lại. Dưới đây là cách bắt bệnh và kê đơn thuốc cho từng loại lỗi.</p>
+            </div>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - Top Banner]</p>
+            </div>
+
+            <h2>1. Các mã lỗi "huyền thoại" và cách sửa</h2>
+            <p>Excel thông báo lỗi rất cụ thể, chỉ là bạn chưa hiểu ngôn ngữ của nó thôi. Hãy tra bảng dưới đây:</p>
+            
+            [Image of Excel error codes explanation chart]
+
+            <table border="1" cellpadding="15" style="width:100%; border-collapse: collapse; margin: 20px 0; border-color: #ddd;">
+                <tr style="background: #217346; color: white;">
+                    <th>Mã lỗi</th>
+                    <th>Nguyên nhân</th>
+                    <th>Cách khắc phục</th>
+                </tr>
+                <tr>
+                    <td style="color: red; font-weight: bold;">#N/A</td>
+                    <td>Không tìm thấy dữ liệu (Not Available). Thường gặp khi dùng VLOOKUP.</td>
+                    <td>Kiểm tra lại giá trị dò tìm xem có bị thừa khoảng trắng không. Hoặc dùng hàm <code>IFERROR</code> để ẩn lỗi.</td>
+                </tr>
+                <tr>
+                    <td style="color: red; font-weight: bold;">#VALUE!</td>
+                    <td>Sai kiểu dữ liệu. Ví dụ: Bạn đang cộng một ô chứa chữ "A" với số 1.</td>
+                    <td>Kiểm tra các ô tham chiếu, đảm bảo chúng đều là số (Number).</td>
+                </tr>
+                <tr>
+                    <td style="color: red; font-weight: bold;">#DIV/0!</td>
+                    <td>Chia cho số 0 (Divide by Zero).</td>
+                    <td>Không thể chia một số cho 0 hoặc ô trống. Hãy đổi mẫu số khác 0.</td>
+                </tr>
+                <tr>
+                    <td style="color: red; font-weight: bold;">#REF!</td>
+                    <td>Mất tham chiếu (Reference Invalid). Do bạn lỡ tay xóa mất cột/dòng chứa dữ liệu gốc.</td>
+                    <td>Nhấn <code>Ctrl + Z</code> để hoàn tác (Undo) ngay lập tức!</td>
+                </tr>
+                 <tr>
+                    <td style="color: red; font-weight: bold;">#####</td>
+                    <td>Cột quá hẹp, không đủ chỗ hiển thị số.</td>
+                    <td>Kéo rộng cột ra là xong.</td>
+                </tr>
+            </table>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - In Article]</p>
+            </div>
+
+            <h2>2. Lỗi "Công thức đúng nhưng không ra kết quả"</h2>
+            <p>Đây là lỗi khiến nhiều người ức chế nhất. Bạn sửa dữ liệu gốc, nhưng ô kết quả cứ đứng im không chịu nhảy số mới?</p>
+            <p><strong>Nguyên nhân:</strong> Excel đang ở chế độ tính toán Thủ công (Manual Calculation).</p>
+            <p><strong>Cách sửa:</strong></p>
+            <ul>
+                <li>Vào thẻ <strong>Formulas</strong> trên thanh menu.</li>
+                <li>Chọn mục <strong>Calculation Options</strong>.</li>
+                <li>Tích chọn vào <strong>Automatic</strong> (Tự động).</li>
+            </ul>
+            
+            <div class="image-placeholder">
+                [Ảnh minh họa menu Calculation Options Automatic]
+            </div>
+
+            <h2>3. Lỗi số hiển thị dạng Text (Tam giác xanh)</h2>
+            <p>Bạn thấy một hình tam giác nhỏ màu xanh lá cây ở góc ô? Đó là do Excel cảnh báo: "Trông giống số nhưng lại đang được lưu dưới dạng văn bản". Điều này khiến hàm SUM không cộng được.</p>
+            <p><strong>Cách sửa:</strong> Bôi đen các ô đó -> Bấm vào dấu chấm than vàng hiện ra bên cạnh -> Chọn <strong>Convert to Number</strong>.</p>
+
+            <div class="call-to-action">
+                <h3>Bạn gặp lỗi VLOOKUP trả về #N/A?</h3>
+                <p>Xem bài viết chuyên sâu về cách sửa lỗi VLOOKUP tại đây.</p>
+                <button onclick="window.location.href='index.html'">Xem hướng dẫn sửa lỗi VLOOKUP</button>
+            </div>
+
+        </main>
+
+        <aside>
+            <div class="sidebar-widget">
+                <h3>Tìm kiếm lỗi...</h3>
+                <input type="text" placeholder="Nhập mã lỗi (VD: #REF)...">
+            </div>
+
+            <div class="ad-box sticky-ad">
+                <p>[Quảng cáo Google AdSense - Vertical]</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Bài viết liên quan</h3>
+                <ul>
+                    <li><a href="basic_functions.html">Hàm cơ bản cho người mới</a></li>
+                    <li><a href="charts.html">Cách vẽ biểu đồ</a></li>
+                    <li><a href="template.html">Tải mẫu Excel sạch lỗi</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Bản quyền © 2026 ExcelPro.vn</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

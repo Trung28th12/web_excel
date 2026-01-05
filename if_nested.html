@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàm IF lồng nhau trong Excel: Cách xếp loại học sinh, nhân viên | ExcelPro</title>
+    <meta name="description" content="Hướng dẫn sử dụng hàm IF lồng nhau (Nested IF) để xử lý nhiều điều kiện. Cách dùng hàm IFS mới nhất để thay thế. Ví dụ xếp loại Giỏi, Khá, Trung Bình.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="home.html" style="color:white; text-decoration:none;">ExcelPro.vn</a></div>
+        <nav>
+            <a href="home.html">Trang chủ</a>
+            <a href="index.html">Hàm Excel</a>
+            <a href="#">Google Sheets</a>
+            <a href="template.html">Tải Template</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <h1>Hàm IF lồng nhau: Xử lý nhiều điều kiện phức tạp dễ dàng</h1>
+            <p class="meta">Đăng bởi: Admin | Chuyên mục: Hàm Logic</p>
+
+            <div class="intro">
+                <p>Hàm IF cơ bản chỉ giải quyết được bài toán "Đúng hoặc Sai". Nhưng nếu bạn cần xếp loại học sinh thành 4 mức (Giỏi, Khá, Trung bình, Yếu) thì sao? Đó là lúc bạn cần dùng <strong>Hàm IF lồng nhau (Nested IF)</strong>.</p>
+            </div>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - Top Banner]</p>
+            </div>
+
+            <h2>1. Cấu trúc hàm IF lồng nhau</h2>
+            <p>Hiểu đơn giản: Bạn đặt một hàm IF khác vào bên trong phần "Giá trị nếu sai" của hàm IF đầu tiên.</p>
+            <div class="code-block">
+                =IF(Điều_kiện_1, Kết_quả_1, IF(Điều_kiện_2, Kết_quả_2, Kết_quả_còn_lại))
+            </div>
+            <p><strong>Nguyên tắc hoạt động:</strong> Excel sẽ kiểm tra lần lượt từ trái sang phải. Nếu Điều kiện 1 đúng, nó lấy Kết quả 1 và dừng lại. Nếu sai, nó mới xét tiếp đến Điều kiện 2.</p>
+
+            <h2>2. Ví dụ thực tế: Xếp loại học lực</h2>
+            <p>Giả sử bạn có điểm số ở ô <strong>B2</strong> và cần xếp loại theo quy tắc:</p>
+            <ul>
+                <li>Điểm >= 8: <strong>Giỏi</strong></li>
+                <li>Điểm >= 6.5: <strong>Khá</strong></li>
+                <li>Điểm >= 5: <strong>Trung bình</strong></li>
+                <li>Còn lại: <strong>Yếu</strong></li>
+            </ul>
+
+            <div class="image-placeholder">
+                [Ảnh minh họa bảng điểm học sinh]
+            </div>
+
+            <p>Công thức sẽ là:</p>
+            <div class="code-block">
+                =IF(B2>=8, "Giỏi", IF(B2>=6.5, "Khá", IF(B2>=5, "Trung bình", "Yếu")))
+            </div>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - In Article]</p>
+            </div>
+
+            <h2>3. Sai lầm chết người khi dùng IF lồng nhau</h2>
+            <p>Rất nhiều bạn viết sai thứ tự logic. Ví dụ: Bạn xét điều kiện <code>>5</code> trước điều kiện <code>>8</code>.</p>
+            <p><em>Ví dụ sai:</em> <code>=IF(B2>=5, "Trung bình", IF(B2>=8, "Giỏi"...))</code></p>
+            <p>=> Kết quả sai: Nếu điểm là 9, Excel thấy 9 > 5 là đúng nên trả về "Trung bình" ngay lập tức mà không xét tiếp.</p>
+            <p><strong>Mẹo nhớ:</strong> Khi dùng dấu Lớn hơn (>=), hãy xét từ Lớn nhất xuống Nhỏ nhất.</p>
+
+            <h2>4. Giải pháp hiện đại: Hàm IFS (Nên dùng)</h2>
+            <p>Nếu bạn dùng Excel 2019 hoặc Office 365, hãy quên IF lồng nhau đi. Hàm <strong>IFS</strong> viết ngắn gọn hơn nhiều:</p>
+            <div class="code-block">
+                =IFS(B2>=8, "Giỏi", B2>=6.5, "Khá", B2>=5, "Trung bình", TRUE, "Yếu")
+            </div>
+
+            <div class="call-to-action">
+                <h3>Bạn muốn bảng tính mẫu để copy công thức?</h3>
+                <button onclick="window.location.href='template.html'">Tải File Thực Hành Tại Đây</button>
+            </div>
+
+        </main>
+
+        <aside>
+            <div class="sidebar-widget">
+                <h3>Tìm kiếm</h3>
+                <input type="text" placeholder="Tìm hàm IF, VLOOKUP...">
+            </div>
+
+            <div class="ad-box sticky-ad">
+                <p>[Quảng cáo Google AdSense - Vertical]</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Bài viết liên quan</h3>
+                <ul>
+                    <li><a href="index.html">Hàm VLOOKUP cơ bản</a></li>
+                    <li><a href="pivot.html">Cách dùng Pivot Table</a></li>
+                    <li><a href="#">Hàm SUMIFS tính tổng nhiều điều kiện</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Bản quyền © 2026 ExcelPro.vn</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

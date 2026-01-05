@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng hợp các Hàm Excel thông dụng nhất: Cú pháp & Ví dụ | ExcelPro</title>
+    <meta name="description" content="Tra cứu đầy đủ các hàm Excel: VLOOKUP, IF, SUMIF, COUNTIF... Phân loại theo nhóm Tìm kiếm, Logic, Xử lý chuỗi. Hướng dẫn chi tiết dễ hiểu.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="home.html" style="color:white; text-decoration:none;">ExcelPro.vn</a></div>
+        <nav>
+            <a href="home.html">Trang chủ</a>
+            <a href="functions.html" style="text-decoration: underline;">Hàm Excel</a>
+            <a href="sheets.html">Google Sheets</a>
+            <a href="templates.html">Tải Template</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main style="width: 100%; flex: none;">
+            
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h1>Thư viện Hàm Excel Tra Cứu Nhanh</h1>
+                <p>Tổng hợp cú pháp và ví dụ của hơn 50+ hàm phổ biến nhất cho dân văn phòng.</p>
+                
+                <div class="search-box" style="justify-content: center;">
+                    <input type="text" placeholder="Nhập tên hàm bạn cần tìm (VD: Match, Index...)">
+                    <button><i class="fas fa-search"></i> Tìm Hàm</button>
+                </div>
+            </div>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - Display Ad]</p>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-star" style="color: gold;"></i> Bài viết nổi bật (Có hướng dẫn chi tiết)</h2>
+            <div class="post-grid" style="grid-template-columns: repeat(3, 1fr);">
+                
+                <div class="post-card" onclick="window.location.href='index.html'">
+                    <div class="post-thumb" style="background:#e8f5e9; height:150px; display:flex; align-items:center; justify-content:center; color:#217346;">
+                        <span style="font-size: 2em; font-weight: bold;">VLOOKUP</span>
+                    </div>
+                    <div class="post-info">
+                        <h3>Hàm VLOOKUP</h3>
+                        <p>Dò tìm dữ liệu chính xác từ bảng khác.</p>
+                    </div>
+                </div>
+
+                <div class="post-card" onclick="window.location.href='if_nested.html'">
+                    <div class="post-thumb" style="background:#e8f5e9; height:150px; display:flex; align-items:center; justify-content:center; color:#217346;">
+                        <span style="font-size: 2em; font-weight: bold;">IF / IFS</span>
+                    </div>
+                    <div class="post-info">
+                        <h3>Hàm IF Lồng Nhau</h3>
+                        <p>Xử lý nhiều điều kiện logic phức tạp.</p>
+                    </div>
+                </div>
+
+                 <div class="post-card" onclick="window.location.href='basic_functions.html'">
+                    <div class="post-thumb" style="background:#e8f5e9; height:150px; display:flex; align-items:center; justify-content:center; color:#217346;">
+                        <span style="font-size: 2em; font-weight: bold;">SUM / COUNT</span>
+                    </div>
+                    <div class="post-info">
+                        <h3>Hàm Cơ Bản</h3>
+                        <p>Nhóm hàm Tính tổng, Đếm, Trung bình.</p>
+                    </div>
+                </div>
+                <div class="post-card" onclick="window.location.href='text_functions.html'">
+    <div class="post-thumb" style="background:#e8f5e9; height:150px; display:flex; align-items:center; justify-content:center; color:#217346;">
+        <span style="font-size: 2em; font-weight: bold;">LEFT/MID</span>
+    </div>
+    <div class="post-info">
+        <h3>Hàm Xử Lý Chuỗi</h3>
+        <p>Cắt lọc dữ liệu với LEFT, RIGHT, MID.</p>
+    </div>
+</div>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 40px;"><i class="fas fa-list-alt"></i> Bảng tra cứu cú pháp nhanh</h2>
+            <p>Copy công thức bên dưới và thay thế địa chỉ ô của bạn.</p>
+            
+            <table border="1" cellpadding="10" style="width:100%; border-collapse: collapse; margin-top: 20px; border-color: #ddd;">
+                <thead style="background: #217346; color: white;">
+                    <tr>
+                        <th>Tên Hàm</th>
+                        <th>Công dụng</th>
+                        <th>Cú pháp mẫu (Copy dùng ngay)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #f9f9f9;">
+                        <td colspan="3"><strong>--- Nhóm Xử lý Chuỗi (Text) ---</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>LEFT</strong></td>
+                        <td>Lấy ký tự bên trái</td>
+                        <td><code>=LEFT(Ô_chứa_chữ, Số_ký_tự)</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>RIGHT</strong></td>
+                        <td>Lấy ký tự bên phải</td>
+                        <td><code>=RIGHT(Ô_chứa_chữ, Số_ký_tự)</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>MID</strong></td>
+                        <td>Lấy ký tự ở giữa</td>
+                        <td><code>=MID(Ô_chứa_chữ, Vị_trí_bắt_đầu, Số_ký_tự)</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>TEXT</strong></td>
+                        <td>Đổi định dạng số/ngày</td>
+                        <td><code>=TEXT(Ô_ngày_tháng, "dd/mm/yyyy")</code></td>
+                    </tr>
+
+                    <tr style="background: #f9f9f9;">
+                        <td colspan="3"><strong>--- Nhóm Ngày Tháng (Date & Time) ---</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>TODAY</strong></td>
+                        <td>Lấy ngày hôm nay</td>
+                        <td><code>=TODAY()</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>DATEDIF</strong></td>
+                        <td>Tính khoảng cách 2 ngày</td>
+                        <td><code>=DATEDIF(Ngày_đầu, Ngày_cuối, "d")</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>EOMONTH</strong></td>
+                        <td>Ngày cuối cùng của tháng</td>
+                        <td><code>=EOMONTH(Ngày_bắt_đầu, 0)</code></td>
+                    </tr>
+
+                    <tr style="background: #f9f9f9;">
+                        <td colspan="3"><strong>--- Nhóm Tìm Kiếm & Tham Chiếu ---</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>HLOOKUP</strong></td>
+                        <td>Dò tìm theo hàng ngang</td>
+                        <td><code>=HLOOKUP(Giá_trị, Bảng, Hàng_số, 0)</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>MATCH</strong></td>
+                        <td>Tìm vị trí của giá trị</td>
+                        <td><code>=MATCH(Giá_trị, Vùng_tìm, 0)</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>INDEX</strong></td>
+                        <td>Lấy giá trị tại tọa độ</td>
+                        <td><code>=INDEX(Vùng_dữ_liệu, Hàng_số, Cột_số)</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="ad-box">
+                <p>[Quảng cáo Google AdSense - In Feed]</p>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>Bản quyền © 2026 ExcelPro.vn</p>
+    </footer>
+    <script src="script.js"></script>
+    
+    <style>
+        table tr:hover {background-color: #f1f1f1;}
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #c7254e;
+            font-family: monospace;
+        }
+    </style>
+</body>
+</html>
